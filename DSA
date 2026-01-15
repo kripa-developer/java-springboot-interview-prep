@@ -1,1 +1,187 @@
+1. Reverse a Number
+
+Input: 1234
+Output: 4321
+
+public class ReverseNumber {
+    public static void main(String[] args) {
+        int num = 1234, rev = 0;
+
+        while (num != 0) {
+            rev = rev * 10 + num % 10;
+            num /= 10;
+        }
+
+        System.out.println(rev);
+    }
+}
+
+2. Reverse a String
+
+Input: JAVA
+Output: AVAJ
+
+public class ReverseString {
+    public static void main(String[] args) {
+        String str = "Java";
+        String rev = "";
+
+        for (int i = str.length() - 1; i >= 0; i--) {
+            rev += str.charAt(i);
+        }
+
+        System.out.println(rev);
+    }
+}
+3. check Palindrome or not(String)
+
+Input: madam
+Output: palindrome
+
+public class PalindromeString {
+    public static void main(String[] args) {
+        String str = "madam";
+        String rev = new StringBuilder(str).reverse().toString();
+
+        if (str.equals(rev))
+            System.out.println("Palindrome");
+        else
+            System.out.println("Not Palindrome");
+    }
+}
+
+4. check Palindrome or not(Number)
+
+Input: 12321
+Output: palindrome
+
+public class PalindromeNumber {
+    public static void main(String[] args) {
+        int num = 121, temp = num, rev = 0;
+
+        while (num != 0) {
+            rev = rev * 10 + num % 10;
+            num /= 10;
+        }
+
+        System.out.println(temp == rev ? "Palindrome" : "Not Palindrome");
+    }
+}
+
+5.Fibinocci series
+
+public class Fibonacci {
+    public static void main(String[] args) {
+        int n = 5, a = 0, b = 1;
+
+        System.out.print(a + " " + b);
+
+        for (int i = 2; i < n; i++) {
+            int c = a + b;
+            System.out.print(" " + c);
+            a = b;
+            b = c;
+        }
+    }
+}
+
+6.Factorial of anumber
+
+Input: 5
+Output: 120
+
+public class Factorial {
+    public static void main(String[] args) {
+        int num = 5, fact = 1;
+
+        for (int i = 1; i <= num; i++) {
+            fact *= i;
+        }
+
+        System.out.println(fact);
+    }
+}
+
+7. Find largest element in an array
+
+Input: [23,56,57,45,89,4]
+Output: 89
+
+public class LargestElement {
+    public static void main(String[] args) {
+        int[] arr = {10, 5, 20, 8};
+        int max = arr[0];
+
+        for (int i : arr) {
+            if (i > max)
+                max = i;
+        }
+
+        System.out.println(max);
+    }
+}
+
+8. check prime number
+
+Input: 7
+Output: prime
+
+public class PrimeNumber {
+    public static void main(String[] args) {
+        int num = 7;
+        boolean isPrime = true;
+
+        if (num <= 1) isPrime = false;
+
+        for (int i = 2; i <= num / 2; i++) {
+            if (num % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        System.out.println(isPrime ? "Prime" : "Not Prime");
+    }
+}
+
+9. Sum of Digits
+
+Input: 1234
+Output: 
+
+public class SumOfDigits {
+    public static void main(String[] args) {
+        int num = 123, sum = 0;
+
+        while (num != 0) {
+            sum += num % 10;
+            num /= 10;
+        }
+
+        System.out.println(sum);
+    }
+}
+
+10.Linear Search
+
+Input: 3
+Output: fount at index 2
+
+public class LinearSearch {
+    public static void main(String[] args) {
+        int[] arr = {5, 3, 7, 1};
+        int key = 7;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == key) {
+                System.out.println("Found at index " + i);
+                return;
+            }
+        }
+
+        System.out.println("Not Found");
+    }
+}
+
+
 
